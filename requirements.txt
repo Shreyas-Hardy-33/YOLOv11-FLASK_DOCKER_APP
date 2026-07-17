@@ -1,0 +1,7 @@
+Flask
+requests
+ultralytics
+Werkzeug
+opencv-python
+numpy
+pillow
