@@ -24,7 +24,7 @@ pipeline {
         stage('Push to Docker Hub'){
             steps{
                 script{
-                    bat 'echo %IMAGE_NAME%:%BUILD_NUMBER%'
+                    bat 'docker login'
                     bat 'docker push %IMAGE_NAME%:%BUILD_NUMBER%'
                 }
             }
