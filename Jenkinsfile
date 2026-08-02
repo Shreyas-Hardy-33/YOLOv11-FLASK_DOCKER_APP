@@ -20,6 +20,23 @@ pipeline {
                 bat 'docker build -t %IMAGE_NAME%:%BUILD_NUMBER% .'
             }
         }
+
+        stage('Push to Docker Hub'){
+            steps{
+                script{
+                    bat 'echo %DOCKERHUB_CREDENTIALS_PSW% | docker login -u %DOCKER_CREDENTIALS_USR% --password-stdin'
+                    bat 'docker push %IMAGE_NAME:$BUILD_NUMBER%
+                    
+                }
+            }
+        }
+
+        //This is for testing the app in my system before deployment
+        stage('Deploy to Stage'){
+            steps{
+                bat 'docker run -d -p 5000:5000  %IMAGE_NAME:$BUILD_NUMBER%'
+            }
+        }
         
     }
 }
