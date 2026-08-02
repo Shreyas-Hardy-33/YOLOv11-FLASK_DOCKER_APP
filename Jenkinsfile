@@ -7,9 +7,9 @@ pipeline {
             }
         }
 
-        stage('Install dependencies'){
+        stage('Build Docker Image'){
             steps{
-                bash 'pip install -r requirements.txt'
+                sh 'docker build -t $IMAGE_NAME:$BUILD_NUMBER .'
             }
         }
         
