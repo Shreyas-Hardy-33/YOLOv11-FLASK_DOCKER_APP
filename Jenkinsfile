@@ -25,7 +25,7 @@ pipeline {
             steps{
                 script{
                     bat 'echo %DOCKERHUB_CREDENTIALS_PSW% | docker login -u %DOCKER_CREDENTIALS_USR% --password-stdin'
-                    bat 'docker push %IMAGE_NAME:$BUILD_NUMBER%
+                    bat 'docker push %IMAGE_NAME:%BUILD_NUMBER%
                     
                 }
             }
