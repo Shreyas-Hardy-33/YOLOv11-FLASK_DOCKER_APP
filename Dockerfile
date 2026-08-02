@@ -1,6 +1,14 @@
 #Official python image
 FROM Python 3.11.9
 
+#CREATING A FOLDER CALLED APP INSIDE DOCKER IMAGE
 WORKDIR /app
-
-#Copy app files
+#COPYING REQUIREMENTS INTO APP FOLDER
+COPY requirements.txt ./
+#INSTALLING LIBRARIES INSIDE REQUIREMENTS
+RUN pip install --no-cache-dir -r requirements.txt
+COPY .
+#FLASK SERVER RUNS ON PORT 5000
+EXPOSE 5000
+#EXECUTE COMMANDS TO RUN THE FLASK APP
+CMD ["python","app.py"]
