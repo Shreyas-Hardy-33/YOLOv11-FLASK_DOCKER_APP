@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        git 'Git'
+    }
     environment{
         //Dockerhub credentials is set in jenkins settings and is accessed here.
         DOCKERHUB_CREDENTIALS = credentials('shreyas607-dockerhub')
