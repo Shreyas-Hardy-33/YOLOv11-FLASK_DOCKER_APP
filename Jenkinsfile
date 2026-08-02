@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git clone 'https://github.com/Shreyas-Hardy-33/YOLOv11-FLASK_DOCKER_APP.git'
+                git 'https://github.com/Shreyas-Hardy-33/YOLOv11-FLASK_DOCKER_APP.git'
             }
         }
 
