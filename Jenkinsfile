@@ -24,7 +24,7 @@ pipeline {
         stage('Push to Docker Hub'){
             steps{
                 script{
-                    bat 'docker push %IMAGE_NAME:%BUILD_NUMBER%'
+                    bat 'docker push %IMAGE_NAME%:%BUILD_NUMBER%'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         //This is for testing the app in my system before deployment
         stage('Deploy to Stage'){
             steps{
-                bat 'docker run -d -p 5000:5000  %IMAGE_NAME:%BUILD_NUMBER%'
+                bat 'docker run -d -p 5000:5000  %IMAGE_NAME%:%BUILD_NUMBER%'
             }
         }
         
