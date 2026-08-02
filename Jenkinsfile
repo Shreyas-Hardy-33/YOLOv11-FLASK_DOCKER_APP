@@ -24,7 +24,7 @@ pipeline {
         stage('Push to Docker Hub'){
             steps{
                 script{
-                    bat 'docker login -u %DOCKER_CREDENTIALS_USR%'
+                    bat 'echo %DOCKER_CREDENTIALS_PSW% && docker login -u %DOCKER_CREDENTIALS_USR% --password-stdin'
                     bat 'docker push %IMAGE_NAME:%BUILD_NUMBER%'
                 }
             }
