@@ -1,5 +1,5 @@
 #Official python image
-FROM Python 3.11.9
+FROM python:3.11.9
 
 #CREATING A FOLDER CALLED APP INSIDE DOCKER IMAGE
 WORKDIR /app
