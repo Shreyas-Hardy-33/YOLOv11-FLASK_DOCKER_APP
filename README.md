@@ -5,7 +5,16 @@ What this project includes:
 <img width="1721" height="818" alt="Screenshot 2026-08-26 231909" src="https://github.com/user-attachments/assets/df01a20c-0b6b-429d-a381-f44aaaaac753" />
 
 
-->Training of Yolov11n model with the  dataset in colab notebook: !yolo model=yolo11n.pt task=detect mode=train epochs=20 imgsz=640 data=location_of_dataset
+->Training of Yolov11n model with the  dataset in colab notebook: 
+Command Used in notebook to train a custom yolo model : !yolo model=yolo11n.pt task=detect mode=train epochs=20 imgsz=640 data=location_of_dataset
+
+
+->Evaluation metrics : 
+
+<img width="1638" height="128" alt="Screenshot 2026-08-27 000407" src="https://github.com/user-attachments/assets/befd9e3e-9c8a-4dc4-b725-e82220107a61" />
+
+
+
 
 ->A simple locally run Flask app  that uses YOLOv11n model to detect number of potholes in an image.
 
@@ -21,7 +30,6 @@ What this project includes:
 ->There is also a page called 'Output' that showcases the detected potholes with a confidence score from the model inference.
 
 <img width="1455" height="593" alt="Screenshot 2026-08-26 234201" src="https://github.com/user-attachments/assets/964ae09f-6db6-48d7-bc47-43b950bef33a" />
-
 
 
    
