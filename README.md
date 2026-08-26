@@ -1,8 +1,11 @@
 What this project includes:
 
-1. Collection of over 1k images from roboflow dataset (https://universe.roboflow.com/proyectos-cityfix/pothole-detection-object).
+1. Collection of over 1k images from roboflow dataset ([https://universe.roboflow.com/proyectos-cityfix/pothole-detection-object](https://universe.roboflow.com/aimlprojects/pothole-detection-w3iq7-1msjv)).
 
-2. Training of Yolov11 model with the custom dataset.
+<img width="1721" height="818" alt="Screenshot 2026-08-26 231909" src="https://github.com/user-attachments/assets/df01a20c-0b6b-429d-a381-f44aaaaac753" />
+
+
+3. Training of Yolov11n model with the  dataset.
     
 3.A simple locally run Flask app  that uses YOLOv11n model to detect number of potholes in an image.
 
